@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/00a7ab4cb7.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.3.2/dist/echarts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/timeago.js@4.0.2/dist/timeago.min.js"></script>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div class="left">
+        <div class="container">
+          <div class="header">
+            <div class="date" id="date"></div>
+            <div class="searchBar">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <input class="searchInput" id="searchInput" type="text" />
+              <button class="searchButton">Search</button>
+            </div>
+          </div>
+
+          <div class="todayOverview">
+            <div class="sectionTitle">
+              Today Overview of <span id="location"></span>
+            </div>
+            <div class="row">
+              <div class="overviewProp">
+                <div class="propIconContainer">
+                  <i class="propIcon fa-solid fa-wind"></i>
+                </div>
+                <div class="propValueContainer">
+                  <div class="propTitle">Wind</div>
+                  <div class="propMain">
+                    <span class="primaryData">
+                      <span class="propValue" id="wind"></span>
+                      <span class="propMetric">mph</span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="overviewProp">
+                <div class="propIconContainer">
+                  <i class="propIcon fa-solid fa-temperature-half"></i>
+                </div>
+                <div class="propValueContainer">
+                  <div class="propTitle">Weather</div>
+                  <div class="propMain">
+                    <span class="primaryData">
+                      <span class="propValue" id="currentweather"></span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="overviewProp">
+                <div class="propIconContainer">
+                  <i class="propIcon fa-solid fa-water"></i>
+                </div>
+                <div class="propValueContainer">
+                  <div class="propTitle">Pressure</div>
+                  <div class="propMain">
+                    <span class="primaryData">
+                      <span class="propValue" id="pressure"></span>
+                      <span class="propMetric">hpa</span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="overviewProp">
+                <div class="propIconContainer">
+                  <i class="propIcon fa-solid fa-droplet"></i>
+                </div>
+                <div class="propValueContainer">
+                  <div class="propTitle">Humidity</div>
+                  <div class="propMain">
+                    <span class="primaryData">
+                      <span class="propValue" id="humidity"></span>
+                      <span class="propMetric">%</span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="todayOverview">
+            <div class="sectionTitle">Temperature Report</div>
+            <div class="row">
+              <div class="overviewProp">
+                <div class="propIconContainer">
+                  <i class="propIcon fa-solid fa-temperature-half"></i>
+                </div>
+                <div class="propValueContainer">
+                  <div class="propTitle">Temperature</div>
+                  <div class="propMain">
+                    <span class="primaryData">
+                      <span class="propValue" id="Temperature"></span>
+                      <span class="propMetric">˚F</span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="overviewProp">
+                <div class="propIconContainer">
+                  <i class="propIcon fa-solid fa-temperature-half"></i>
+                </div>
+                <div class="propValueContainer">
+                  <div class="propTitle">Feels Like</div>
+                  <div class="propMain">
+                    <span class="primaryData">
+                      <span class="propValue" id="Feels-like"></span>
+                      <span class="propMetric">˚F</span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="overviewProp">
+                <div class="propIconContainer">
+                  <i class="propIcon fa-solid fa-temperature-half"></i>
+                </div>
+                <div class="propValueContainer">
+                  <div class="propTitle">Minimum</div>
+                  <div class="propMain">
+                    <span class="primaryData">
+                      <span class="propValue" id="Minimum"></span>
+                      <span class="propMetric">˚F</span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="overviewProp">
+                <div class="propIconContainer">
+                  <i class="propIcon fa-solid fa-temperature-half"></i>
+                </div>
+                <div class="propValueContainer">
+                  <div class="propTitle">Maximum</div>
+                  <div class="propMain">
+                    <span class="primaryData">
+                      <span class="propValue" id="Maximum"></span>
+                      <span class="propMetric">˚F</span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script src="/js/script.js"></script>
+    </div>
+  </body>
+</html>
